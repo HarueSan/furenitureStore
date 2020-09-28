@@ -13,6 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//customer
 Route::get('/', function () {
     return view('customer/home_customer');
 });
+
+Route::get('/login', function () {
+    return view('customer/login_user');
+});
+
+Route::get('/register', function () {
+    return view('customer/register_customer');
+});
+
+
+
+//sellman
+
