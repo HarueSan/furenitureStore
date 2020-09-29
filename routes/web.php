@@ -26,6 +26,10 @@ Route::get('/register', function () {
     return view('customer/register_customer');
 });
 
+Route::get('/headbill', function () {
+    return view('customer/headbill');
+});
+
 
 
 //sellman
