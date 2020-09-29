@@ -26,8 +26,11 @@ Route::get('/register', function () {
     return view('customer/register_customer');
 });
 
-Route::get('/headbill', function () {
-    return view('customer/headbill');
+Route::get('/order', function () {
+    return view('customer/order/order');
+});
+Route::get('/cfdelete', function () {
+    return view('customer/order/confirm_delete');
 });
 
 
