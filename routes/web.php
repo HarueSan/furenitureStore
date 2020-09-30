@@ -30,7 +30,9 @@ Route::get('/headbill', function () {
     return view('customer/headbill');
 });
 
-
+Route::get('/modeproduct', function(){
+    return view('customer/mode_product');
+});
 
 //sellman
 
