@@ -39,3 +39,6 @@ Route::get('/modeproduct', function(){
 
 //sellman
 
+Route::get('/homesell', function () {
+    return view('sellman/home_sellman');
+});
