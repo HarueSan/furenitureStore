@@ -37,5 +37,10 @@ Route::get('/modeproduct', function(){
     return view('customer/mode_product');
 });
 
+Route::get('/reserveproduct', function(){
+    return view('customer/reserve_product');
+});
 //sellman
-
+Route::get('/deliveryadmin', function(){
+    return view('sellman/delivery_product_sellman');
+});
