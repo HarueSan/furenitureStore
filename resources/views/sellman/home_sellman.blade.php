@@ -65,11 +65,11 @@
         <a class="active" href="register"><i class="previous round">คำสั่งซื้อ</i></a>
     </div><br>
     <?php
-    $image_url='https://sv1.picz.in.th/images/2020/10/10/Oma14E.jpg'
+    $image_url='https://img.bpicc.com/file/BP2520/2020/10/11/20201011_000926.jpg'
     ?>
     <div class="row">
-        <div class="column"> <br><br><br><br><br> &nbsp;&nbsp;<div align="center">
-            <img src="<?php echo $image_url;?>" alt="Snow" style="width:150%">
+        <div class="column"><div align="center">
+            <img src="<?php echo $image_url;?>" alt="Snow" style="width:400%">
         </div>
     </div>
     </div>
