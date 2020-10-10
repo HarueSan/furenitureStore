@@ -41,6 +41,13 @@ Route::get('/reserveproduct', function(){
     return view('customer/reserve_product');
 });
 //sellman
+<<<<<<< HEAD
 Route::get('/deliveryadmin', function(){
     return view('sellman/delivery_product_sellman');
 });
+=======
+
+Route::get('/homesell', function () {
+    return view('sellman/home_sellman');
+});
+>>>>>>> 5c8cc3674b98e3876f865e9ef47bf844a45a8625
