@@ -38,17 +38,17 @@
     <body >
         <table class = center>
             <tr>
-                <th>ลำดับ</th>
+                <th> ID ลูกค้า</th>
                 <th>วันที่สั่งซื้อ</th>
                 <th>หมายเลขบิล</th>
-                <th>วิธีการชำระเงิน</th>
+                <th>สถานะการจัดส่ง</th>
                 <th>ลบ</th>
             </tr>
             <tr>
-                <td>1</td>
+                <td>0001</td>
                 <td>10-10-2563</td>
                 <td>123456</td>
-                <td>เดบิต</td>
+                <td>ส่งสำเร็จ</td>
                 <td>
                     <a href="/cfdelete">
                         <i class="fa fa-trash-o" style="color: red"></i>
@@ -57,10 +57,10 @@
                 
             </tr>
             <tr>
-                <td>2</td>
+                <td>0002</td>
                 <td>10-10-2563</td>
                 <td>123457</td>
-                <td>เดบิต</td>
+                <td>กำลังจัดส่ง</td>
                 <td>
                     <a href="/cfdelete">
                         <i class="fa fa-trash-o" style="color: red"></i>
@@ -69,10 +69,10 @@
                 
             </tr>
             <tr>
-                <td>3</td>
+                <td>0003</td>
                 <td>10-10-2563</td>
                 <td>123458</td>
-                <td>เครดิต</td>
+                <td>ส่งสำเร็จ</td>
                 <td>
                     <a href="/cfdelete">
                         <i class="fa fa-trash-o" style="color: red"></i>

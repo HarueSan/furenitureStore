@@ -32,8 +32,17 @@ Route::get('/order', function () {
 Route::get('/cfdelete', function () {
     return view('customer/order/confirm_delete');
 });
-
+Route::get('/billdetail',function(){
+    return view('customer/order/billdetail');
+});
 
 
 //sellman
+Route::get('/orderss',function(){
+    return view('sellman/order/orders');
+});
+
+
+
+
 
