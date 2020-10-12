@@ -29,15 +29,33 @@ Route::get('/register', function () {
 Route::get('/order', function () {
     return view('customer/order/order');
 });
+
 Route::get('/cfdelete', function () {
     return view('customer/order/confirm_delete');
+});
+
+Route::get('/billdetail',function(){
+    return view('customer/order/billdetail');
 });
 
 Route::get('/modeproduct', function(){
     return view('customer/mode_product');
 });
 
+Route::get('/reserveproduct', function(){
+    return view('customer/reserve_product');
+});
+
+
 //sellman
+
+Route::get('/orderss',function(){
+    return view('sellman/order/orders');
+});
+
+Route::get('/deliveryadmin', function(){
+    return view('sellman/delivery_product_sellman');
+});
 
 Route::get('/homesell', function () {
     return view('sellman/home_sellman');

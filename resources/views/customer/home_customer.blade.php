@@ -70,7 +70,7 @@
     $image_url='https://img.bpicc.com/file/BP2520/2020/10/11/20201011_000926.jpg'
     ?>
     <div class="row">
-        <div class="column"> <div align="center">
+        <div class="column"> <div alig ="center">
             <img src="<?php echo $image_url;?>" alt="Snow" style="width:400%">
         </div>
     </div>
