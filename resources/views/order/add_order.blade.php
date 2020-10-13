@@ -20,13 +20,13 @@
                 <div class="col" >
                     <div class="row">
                         <div class= "col-3">
-                            <p>Bill ID: 
+                            <p>Bill ID:
                                 <span style="color: blue;">12345
-                                </span> 
+                                </span>
                             <p>
-                            <p>Date :  
+                            <p>Date :
                                 <span style="color: blue;">13/10/2563
-                                </span>   
+                                </span>
                             </p>
                         </div>
                         <div class="col-5">
@@ -59,13 +59,13 @@
                             <button type="button" class="btn btn-success">Add</button>
                         </div>
                     </div>
-                    <div class="row">  
+                    <div class="row">
                             <div class="">
                                 <table class="table">
                                 <thead class="thead-dark">
                                     <tr>
                                         <th>No</th>
-                                        <th>ID สินค้า</th> 
+                                        <th>ID สินค้า</th>
                                         <th>ชื่อสินค้า</th>
                                         <th>ราคาต่อชิ้น</th>
                                         <th>จำนวนที่ซื้อ</th>
@@ -108,9 +108,9 @@
                                     </tbody>
                                 </table>
                             </div>
-                    </div>  
+                    </div>
                 </div>
-                <div class="col col-lg-2">
+                <div class="col-2">
                     <div>
                         <h3 style="font-size: large;">สรุปยอด</h3>
                         <p>ราคาสินค้ารวม: 475 บาท</p>
@@ -143,10 +143,10 @@
 
                         </form>
                     </div>
-                </div>   
+                </div>
             </div>
         </div>
-        
+
     </body>
 
 </html>
