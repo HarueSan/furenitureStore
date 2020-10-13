@@ -19,12 +19,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/order', function () {
     return view('order/order');
 });
-Route::get('/billdetail',function(){
-    return view('order/billdetail');
-});
 Route::get('/addorder',function(){
     return view('order/add_order');
 });
 Route::get('/deleteorder',function(){
     return view('order/delete_order');
+});
+//Delivery parts
+Route::get('/deliveryhome',function(){
+    return view('delivery/delivery_detail');
+});
+Route::get('/editdelivery',function(){
+    return view('delivery/edit_delivery');
+});
+//Report parts
+Route::get('/report',function(){
+    return view('report/reporter');
 });
