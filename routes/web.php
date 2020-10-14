@@ -13,13 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//customer
-Route::get('/', function () {
-    return view('customer/home_customer');
+//Furniture
+//Customer
+//Order or Bill
+Route::get('/order', function () {
+    return view('order/order');
 });
-
-Route::get('/login', function () {
-    return view('customer/login_user');
+Route::get('/addorder',function(){
+    return view('order/add_order');
 });
 Route::get('/detailpd', function () {
     return view('customer/detail_product');
@@ -33,12 +34,12 @@ Route::get('/cusinformation', function () {
 Route::get('/order', function () {
     return view('customer/order/order');
 });
-Route::get('/cfdelete', function () {
-    return view('customer/order/confirm_delete');
+Route::get('/editdelivery',function(){
+    return view('delivery/edit_delivery');
 });
-
-Route::get('/modeproduct', function(){
-    return view('customer/mode_product');
+//Report parts
+Route::get('/report',function(){
+    return view('report/reporter');
 });
 
 //sellman
