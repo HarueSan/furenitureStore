@@ -42,10 +42,13 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>1</td>
+                                        <td><img src="https://via.placeholder.com/100" class="rounded mx-auto d-block" alt="..."></td>
                                         <td>โต๊ะพับ</td>
                                         <td>150</td>
-                                        <td>ประเภทเดี่ยว ห้องนั่งเล่น</td>
+                                        <td>
+                                            <div class="col">ประเภทเดี่ยว</div>
+                                            <div class="col">ห้องนั่งเล่น</div>
+                                        </td>
                                         <td>โต๊ะที่สามารถพับเก็บได้</td>
                                         <td>
                                             <button type="button" class="btn btn-success">Edit</button>
@@ -53,10 +56,13 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>2</td>
+                                        <td><img src="https://via.placeholder.com/100" class="rounded mx-auto d-block" alt="..."></td>
                                         <td>โต๊ะญี่ปุ่นสีเขียว</td>
                                         <td>175</td>
-                                        <td>ประเภทเดี่ยว ห้องรับแขก</td>
+                                        <td>
+                                            <div class="col">ประเภทเดี่ยว</div>
+                                            <div class="col">ห้องรับแขก</div>
+                                        </td>
                                         <td>โต๊ะขนาดเล็ก สีเขียว รูปแบบจากญี่ปุ่น</td>
                                         <td>
                                             <button type="button" class="btn btn-success">Edit</button>
@@ -64,10 +70,13 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>3</td>
+                                        <td><img src="https://via.placeholder.com/100" class="rounded mx-auto d-block" alt="..."></td>
                                         <td>เก้าอี้ไม้</td>
                                         <td>500</td>
-                                        <td>ประเภทเดี่ยว นอกบ้าน</td>
+                                        <td>
+                                            <div class="col">ประเภทเดี่ยว</div>
+                                            <div class="col">นอกบ้าน</div>
+                                        </td>
                                         <td>เก้าที่ทำจากไม้แท้ เคลือบมันอย่างดี</td>
                                         <td>
                                             <button type="button" class="btn btn-success">Edit</button>

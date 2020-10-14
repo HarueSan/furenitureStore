@@ -44,7 +44,7 @@
                             <p>Type</p>
                         </div>
                         <div class="col-3">
-                            <select name="furnitureType1" id="" class="form-control">
+                            <select name="furnitureType1" id="" class="form-control" >
                                 <option selected>ประเภท...</option>
                                 <option value="1234">ประเภทเดี่ยว</option>
                                 <option value="3456">ประเภทชุด</option>

@@ -39,7 +39,7 @@
                         <div class="form-group row">
                             <label for="type" class="col-sm-2 col-form-label ">Type</label>
                             <div class="col-sm-10">
-                            <input type="text" readonly class="form-control-plaintext text-secondary" id="staticTotalType" value="ประเภทเดี่ยว ห้องนั่งเล่">
+                            <input type="text" readonly class="form-control-plaintext text-secondary" id="staticTotalType" value="ประเภทเดี่ยว ห้องนั่งเล่น">
                             </div>
                         </div>
                         <div class="form-group row">
