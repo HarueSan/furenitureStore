@@ -13,21 +13,35 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//customer
 Route::get('/', function () {
     return view('customer/home_customer');
 });
-Route::get('/cuslogin', function () {
+
+Route::get('/login', function () {
     return view('customer/login_user');
 });
 Route::get('/detailpd', function () {
     return view('customer/detail_product');
-});
-Route::get('/detailpd_sellman', function () {
-    return view('sellman/detailproduct_sellman');
 });
 Route::get('/register', function () {
     return view('customer/register_customer');
 });
 Route::get('/cusinformation', function () {
     return view('customer/customer_information');
+});
+Route::get('/order', function () {
+    return view('customer/order/order');
+});
+Route::get('/cfdelete', function () {
+    return view('customer/order/confirm_delete');
+});
+
+Route::get('/modeproduct', function(){
+    return view('customer/mode_product');
+});
+
+//sellman
+Route::get('/detailpd_sellman', function () {
+    return view('sellman/detailproduct_sellman');
 });
