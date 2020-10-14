@@ -14,6 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Furniture
+Route::get('/furniture', function () {
+    return view('furniture/furniture');
+});
+Route::get('/addfurniture', function () {
+    return view('furniture/add_furniture');
+});
+Route::get('/editfurniture', function () {
+    return view('furniture/edit_furniture');
+});
+Route::get('/deletefurniture', function () {
+    return view('furniture/delete_furniture');
+});
 //Customer
 //Order or Bill
 Route::get('/order', function () {
@@ -22,18 +34,10 @@ Route::get('/order', function () {
 Route::get('/addorder',function(){
     return view('order/add_order');
 });
-Route::get('/detailpd', function () {
-    return view('customer/detail_product');
+Route::get('/deleteorder',function(){
+    return view('order/delete_order');
 });
-Route::get('/register', function () {
-    return view('customer/register_customer');
-});
-Route::get('/cusinformation', function () {
-    return view('customer/customer_information');
-});
-Route::get('/order', function () {
-    return view('customer/order/order');
-});
+//delivery
 Route::get('/editdelivery',function(){
     return view('delivery/edit_delivery');
 });
@@ -42,7 +46,3 @@ Route::get('/report',function(){
     return view('report/reporter');
 });
 
-//sellman
-Route::get('/detailpd_sellman', function () {
-    return view('sellman/detailproduct_sellman');
-});
