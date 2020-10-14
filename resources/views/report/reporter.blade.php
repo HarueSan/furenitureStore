@@ -17,8 +17,8 @@
                 </div>
                 <div class="col">
                     <div class="row">
-                        <div class="col mt-4">
-                            <input class="form-control" type="text" placeholder="Search" aria-label="ค้นหา">
+                        <div class="col mt-3">
+                            <input class="form-control" type="text" placeholder="ค้นหา" aria-label="search">
                         </div>
                         <div class="col mt-3">
                             <button class="btn btn-primary">ค้นหา</button>
