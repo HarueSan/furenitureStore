@@ -13,50 +13,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//customer
-Route::get('/', function () {
-    return view('customer/home_customer');
-});
-
-Route::get('/login', function () {
-    return view('customer/login_user');
-});
-
-Route::get('/register', function () {
-    return view('customer/register_customer');
-});
-
+//Furniture
+//Customer
+//Order or Bill
 Route::get('/order', function () {
-    return view('customer/order/order');
+    return view('order/order');
 });
-
-Route::get('/cfdelete', function () {
-    return view('customer/order/confirm_delete');
+Route::get('/addorder',function(){
+    return view('order/add_order');
 });
-
-Route::get('/billdetail',function(){
-    return view('customer/order/billdetail');
+Route::get('/deleteorder',function(){
+    return view('order/delete_order');
 });
-
-Route::get('/modeproduct', function(){
-    return view('customer/mode_product');
+//Delivery parts
+Route::get('/deliveryhome',function(){
+    return view('delivery/delivery_detail');
 });
-
-Route::get('/reserveproduct', function(){
-    return view('customer/reserve_product');
+Route::get('/editdelivery',function(){
+    return view('delivery/edit_delivery');
 });
-
-
-//sellman
-
-Route::get('/orderss',function(){
-    return view('sellman/order/orders');
-});
-
-Route::get('/deliveryadmin', function(){
-    return view('sellman/delivery_product_sellman');
-});
-
-Route::get('/homesell', function () {
-    return view('sellman/home_sellman');
+//Report parts
+Route::get('/report',function(){
+    return view('report/reporter');
 });
