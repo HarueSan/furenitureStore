@@ -14,7 +14,35 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Furniture
+Route::get('/furniture', function () {
+    return view('furniture/furniture');
+});
+Route::get('/addfurniture', function () {
+    return view('furniture/add_furniture');
+});
+Route::get('/editfurniture', function () {
+    return view('furniture/edit_furniture');
+});
+Route::get('/deletefurniture', function () {
+    return view('furniture/delete_furniture');
+});
+
+
 //Customer
+Route::get('/customer', function () {
+    return view('Customere/customer');
+});
+Route::get('/addcustomer', function () {
+    return view('Customere/add_customer');
+});
+Route::get('/editcustomer', function () {
+    return view('Customere/edit_customer');
+});
+Route::get('/deletecustomer', function () {
+    return view('Customere/delete_customer');
+});
+
+
 //Order or Bill
 Route::get('/order', function () {
     $x = DB::select('select * from bill');
@@ -30,13 +58,14 @@ Route::get('/addorder',function(){
 Route::get('/deleteorder',function(){
     return view('order/delete_order');
 });
-//Delivery parts
-Route::get('/deliveryhome',function(){
-    return view('delivery/delivery_detail');
-});
+
+
+//delivery
 Route::get('/editdelivery',function(){
     return view('delivery/edit_delivery');
 });
+
+
 //Report parts
 Route::get('/report',function(){
     return view('report/reporter');
