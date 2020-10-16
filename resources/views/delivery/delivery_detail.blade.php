@@ -41,7 +41,7 @@
                                         <td>20378, Fort Worth, Texas, USA</td>
                                         <td>กำลังส่ง</td>
                                         <td>
-                                        <button type="button" class="btn btn-success">Edit</button>.
+                                        <button type="button" class="btn btn-success">Edit</button>
                                         <button type="button" class="btn btn-danger">Delete</button>
                                         </td>
                                     </tr>
@@ -51,7 +51,7 @@
                                         <td>1111 สาทร 39 กรุงเทพมหานคร</td>
                                         <td>ยังไม่ได้ส่ง</td>
                                         <td>
-                                            <button type="button" class="btn btn-success">Edit</button>.
+                                            <button type="button" class="btn btn-success">Edit</button>
                                             <button type="button" class="btn btn-danger">Delete</button>
                                         </td>
                                     </tr>
@@ -61,7 +61,7 @@
                                         <td>213, Jongno-gu, Seoul, Republic of Korea</td>
                                         <td>ส่งสำเร็จ</td>
                                         <td>
-                                            <button type="button" class="btn btn-success">Edit</button>.
+                                            <button type="button" class="btn btn-success">Edit</button>
                                             <button type="button" class="btn btn-danger">Delete</button>
                                         </td>
                                     </tr>
@@ -71,7 +71,7 @@
                                         <td>1039, Saitama Perfecture, Japan</td>
                                         <td>ล้มเหลว</td>
                                         <td>
-                                            <button type="button" class="btn btn-success">Edit</button>.
+                                            <button type="button" class="btn btn-success">Edit</button>
                                             <button type="button" class="btn btn-danger">Delete</button>
                                         </td>
                                     </tr>

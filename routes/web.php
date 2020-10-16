@@ -17,8 +17,13 @@ use Illuminate\Support\Facades\Route;
 //Customer
 //Order or Bill
 Route::get('/order', function () {
-    return view('order/order');
+    $x = DB::select('select * from bill');
+    //return view('order/order');
+    return $x;
 });
+
+
+
 Route::get('/addorder',function(){
     return view('order/add_order');
 });
@@ -36,3 +41,4 @@ Route::get('/editdelivery',function(){
 Route::get('/report',function(){
     return view('report/reporter');
 });
+
