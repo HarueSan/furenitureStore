@@ -50,7 +50,7 @@
                                         <td>150</td>
                                         <td>2</td>
                                         <td>300</td>
-                                        <td class="text-primary">ลบ</td>
+                                        <td class="text-danger">ลบ</td>
 
                                     </tr>
                                     <tr>
@@ -60,7 +60,7 @@
                                         <td>175</td>
                                         <td>1</td>
                                         <td>175</td>
-                                        <td class="text-primary">ลบ</td>
+                                        <td class="text-danger">ลบ</td>
 
                                     </tr>
                                     <tr>
@@ -70,7 +70,7 @@
                                         <td>500</td>
                                         <td>1</td>
                                         <td>500</td>
-                                        <td class="text-primary">ลบ</td>
+                                        <td class="text-danger">ลบ</td>
 
                                     </tr>
                                     </tbody>

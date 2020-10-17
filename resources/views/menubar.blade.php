@@ -33,14 +33,14 @@
                         </div>
                         <div>
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">3. Order</a>
+                                <a class="nav-link active" href="/order#">3. Order</a>
                             </li>
                             <div style="padding-left: 25px;">
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="#">Add</a>
+                                    <a class="nav-link active" href="/addorder#">Add</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="#">Delete</a>
+                                    <a class="nav-link active" href="/deleteorder#">Delete</a>
                                 </li>
                             </div>
                         </div>

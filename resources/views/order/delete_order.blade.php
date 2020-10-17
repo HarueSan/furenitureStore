@@ -25,7 +25,7 @@
                 <div>
                     <form>
                         <div class="form-group row">
-                            <label for="idblii" class="col-sm-2 col-form-label text-danger" >ID Bill</label>
+                            <label for="idblii" class="col-sm-2 col-form-label " >ID Bill</label>
                             <div class="col-sm-10">
                             <input type="text" readonly class="form-control-plaintext text-secondary" id="staticBillId" value="123456">
                             </div>
