@@ -48,9 +48,12 @@
                             <li class="nav-item">
                                 <a class="nav-link active" href="#">4. Delivery</a>
                             </li>
-                            <div style="padding-left: 25px;">    
+                            <div style="padding-left: 25px;">
                                 <li class="nav-item">
                                     <a class="nav-link active" href="#">Edit</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Return</a>
                                 </li>
                             </div>
                         </div>
@@ -59,5 +62,5 @@
                                 <a class="nav-link active" href="#">5. Report</a>
                             </li>
                         </div>
-                        
+
 </ul>
