@@ -30,27 +30,25 @@ Route::get('/deletefurniture', function () {
 
 //Customer
 Route::get('/customer', function () {
-    return view('Customere/customer');
+    return view('customer/customer');
 });
 Route::get('/addcustomer', function () {
-    return view('Customere/add_customer');
+    return view('customer/add_customer');
 });
 Route::get('/editcustomer', function () {
-    return view('Customere/edit_customer');
+    return view('customer/edit_customer');
 });
 Route::get('/deletecustomer', function () {
-    return view('Customere/delete_customer');
+    return view('customer/delete_customer');
 });
 
 
 //Order or Bill
 Route::get('/order', function () {
-    $x = DB::select('select * from bill');
-    //return view('order/order');
-    return $x;
+    //$x = DB::select('select * from bill');
+    return view('order/order');
+    //return $x;
 });
-
-
 
 Route::get('/addorder',function(){
     return view('order/add_order');
@@ -63,6 +61,9 @@ Route::get('/deleteorder',function(){
 //delivery
 Route::get('/editdelivery',function(){
     return view('delivery/edit_delivery');
+});
+Route::get('/delivery',function(){
+    return view('delivery/delivery_detail');
 });
 
 
