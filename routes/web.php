@@ -27,6 +27,18 @@ Route::get('/deletefurniture', function () {
     return view('furniture/delete_furniture');
 });
 //Customer
+Route::get('/customer', function () {
+    return view('customer/customer');
+});
+Route::get('/addcustomer', function () {
+    return view('customer/add_customer');
+});
+Route::get('/editcustomer', function () {
+    return view('customer/edit_customer');
+});
+Route::get('/deletecustomer', function () {
+    return view('customer/delete_customer');
+});
 //Order or Bill
 Route::get('/order', function () {
     return view('order/order');
