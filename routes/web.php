@@ -26,9 +26,8 @@ Route::get('/editfurniture', function () {
 Route::get('/deletefurniture', function () {
     return view('furniture/delete_furniture');
 });
-
-
 //Customer
+
 Route::get('/customer', function () {
     return view('customer/customer');
 });
@@ -50,23 +49,21 @@ Route::get('/order', function () {
     //return $x;
 });
 
+//Order or Bill
+Route::get('/order', function () {
+    return view('order/order');
+});
+
 Route::get('/addorder',function(){
     return view('order/add_order');
 });
 Route::get('/deleteorder',function(){
     return view('order/delete_order');
 });
-
-
 //delivery
 Route::get('/editdelivery',function(){
     return view('delivery/edit_delivery');
 });
-Route::get('/delivery',function(){
-    return view('delivery/delivery_detail');
-});
-
-
 //Report parts
 Route::get('/report',function(){
     return view('report/reporter');
