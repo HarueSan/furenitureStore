@@ -27,10 +27,33 @@ Route::get('/deletefurniture', function () {
     return view('furniture/delete_furniture');
 });
 //Customer
+
+Route::get('/customer', function () {
+    return view('customer/customer');
+});
+Route::get('/addcustomer', function () {
+    return view('customer/add_customer');
+});
+Route::get('/editcustomer', function () {
+    return view('customer/edit_customer');
+});
+Route::get('/deletecustomer', function () {
+    return view('customer/delete_customer');
+});
+
+
+//Order or Bill
+Route::get('/order', function () {
+    //$x = DB::select('select * from bill');
+    return view('order/order');
+    //return $x;
+});
+
 //Order or Bill
 Route::get('/order', function () {
     return view('order/order');
 });
+
 Route::get('/addorder',function(){
     return view('order/add_order');
 });
