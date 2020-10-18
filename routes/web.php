@@ -27,7 +27,6 @@ Route::get('/deletefurniture', function () {
     return view('furniture/delete_furniture');
 });
 //Customer
-
 Route::get('/customer', function () {
     return view('customer/customer');
 });
