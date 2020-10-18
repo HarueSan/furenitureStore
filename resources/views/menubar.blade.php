@@ -40,7 +40,7 @@
                                     <a class="nav-link active" href="/addorder#">Add</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="/deleteorder#">Delete</a>
+                                    <a class="nav-link active" href="/editorder#">Edit</a>
                                 </li>
                             </div>
                         </div>
