@@ -74,7 +74,7 @@
                     </div>
                     <div class="row" style="margin-left: 10%; margin-top: 20px">
                         <div class="col" style=" text-align: center;">
-                            <button type="button" class="btn btn-warning">Cancle</button>
+                            <button type="button" class="btn btn-warning">Cancel</button>
                             <button type="button" class="btn btn-success" style="margin-left: 30px;">Add</button>
                         </div>
                     </div>

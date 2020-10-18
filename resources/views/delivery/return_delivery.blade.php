@@ -13,6 +13,46 @@
     </head>
     </br>
 <body>
-
+    <div class="container" style="margin-left:auto; margin-top: 40px">
+        <div class="row">
+            <div class="col-2">
+                @include('menubar')
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col-2">
+                        <p>ID Bill</p>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="JP-0001" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-2">
+                        <p>ราคา</p>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="370 บาท" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <p>เหตุผลในการคืนสินค้า</p>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="สินค้ามีรอยตำหนิ" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                <div class="row">
+                    <div class="col-2">
+                        <p>ช่องทางการคืนสินค้า</p>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="สินค้ามีรอยตำหนิ" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -40,7 +40,9 @@ Route::get('/editcustomer', function () {
 Route::get('/deletecustomer', function () {
     return view('customer/delete_customer');
 });
-
+Route::get('/customerinfo', function(){
+    return view('customer/customer_information');
+});
 
 //Order or Bill
 Route::get('/order', function () {
