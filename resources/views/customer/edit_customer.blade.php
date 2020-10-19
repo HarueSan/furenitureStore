@@ -30,7 +30,7 @@
                     </div>
                     <div class="row" style="margin-top: 20px">
                         <div class="col-2">
-                            <p>First Name</p>
+                            <p>Last Name</p>
                         </div>
                         <div class="col-6">
                             <input type="text" class="form-control" placeholder="กาเกตุ" aria-label="Name input" aria-describedby="inputGroup-sizing-default">
@@ -62,7 +62,7 @@
                     </div>
                     <div class="row" style="margin-left: 10%; margin-top: 20px">
                         <div class="col" style=" text-align: center;">
-                            <button type="button" class="btn btn-warning">Cancle</button>
+                            <button type="button" class="btn btn-warning">Cancel</button>
                             <button type="button" class="btn btn-dark" style="margin-left: 30px;">Update</button>
                         </div>
                     </div>

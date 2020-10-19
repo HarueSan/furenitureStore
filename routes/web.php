@@ -39,19 +39,39 @@ Route::get('/editcustomer', function () {
 Route::get('/deletecustomer', function () {
     return view('customer/delete_customer');
 });
+
+/*-----------------------------****************-----------------------------*/
+
 //Order or Bill
-Route::get('/order', function () {
-    return view('order/order');
-});
-Route::get('/addorder',function(){
-    return view('order/add_order');
-});
-Route::get('/deleteorder',function(){
-    return view('order/delete_order');
-});
+use App\Http\Controllers\Order\OrderController;
+
+Route::get('/order',[OrderController::class,'index']); //'index' is functionname in Controllers\Order\OrderController
+Route::get('/addorder', [OrderController::class,'showAddorderPage']);
+Route::get('/editorder/{id}',[OrderController::class,'showEditorderPage']);
+
+Route::get('/deleteorder/{id}',[OrderController::class,'deletePage']);
+
+Route::post('/addHeadbill',[OrderController::class,'addHeadbill']);
+Route::post('/addFurnitureToOrder/{id}',[OrderController::class,'addFurnitureToOrder']);
+Route::post('/deleteorder/{id}',[OrderController::class,'postDelete']);
+Route::post('/deleteBillDetail/{id}',[OrderController::class,'deleteOrderFromBillDetail']);
+Route::post('/confrimToPay/{id}',[OrderController::class,'confirmPayment']);
+Route::post('/cancelOrder/{id}',[OrderController::class,'cancelBill']);
+
+
+/*-----------------------------****************-----------------------------*/
+// ใช้ get เพื่อดึงข้อมูลจาก database ไปแสดงผลบนหน้าเว็บ
+// ใช้ post เพื่อเพิ่มข้อมูลลงใน database หรือแก้ไขข้อมูล
+/*-----------------------------****************-----------------------------*/
+
+
+
 //delivery
 Route::get('/editdelivery',function(){
     return view('delivery/edit_delivery');
+});
+Route::get('/returndelivery',function(){
+    return view('delivery/return_delivery');
 });
 //Report parts
 Route::get('/report',function(){
