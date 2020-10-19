@@ -56,7 +56,7 @@
                                         </td>
                                         <td>18</td>
                                         <td>ขาว</td>
-                                        <td>ผลิตจากไม้ เคลือบผิวไม้อย่างหนา กันน้ำ ทนความร้อน ค้ำขาด้วยเหล็กพ่นสีเงิน ป้องกันสนิม</td>
+                                        <td>โต๊ะที่สามารถพับเก็บได้</td>
                                         <td>
                                             <button type="button" class="btn btn-success">Edit</button>
                                             <button type="button" class="btn btn-danger">Delete</button>
