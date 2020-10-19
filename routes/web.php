@@ -70,6 +70,9 @@ Route::post('/cancelOrder/{id}',[OrderController::class,'cancelBill']);
 Route::get('/editdelivery',function(){
     return view('delivery/edit_delivery');
 });
+Route::get('/returndelivery',function(){
+    return view('delivery/return_delivery');
+});
 //Report parts
 Route::get('/report',function(){
     return view('report/reporter');
