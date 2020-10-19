@@ -16,6 +16,11 @@
     <meta charset="UTF-8">
 </head>
 <body>
+    {{-- <?php 
+    print_r($order);
+    ?> --}} {{-- ใช้ method post สำหรับการรับค่าข้อมูลจากฟอร์ม form html--}}
+    <form method="post" action="/deleteorder/{{$order->billid}}">
+        @csrf {{-- @crsf ป้องกันการจมตีจากภายนอก--}}
     <div class="container" style="margin-left: 0; margin-top: 40px">
         <div class="row">
             <div class="col-2">
@@ -23,49 +28,42 @@
             </div>
             <div class="col">
                 <div>
-                    <form>
                         <div class="form-group row">
                             <label for="idblii" class="col-sm-2 col-form-label " >ID Bill</label>
                             <div class="col-sm-10">
-                            <input type="text" readonly class="form-control-plaintext text-secondary" id="staticBillId" value="123456">
+                            <input type="text" readonly class="form-control-plaintext text-secondary" id="staticBillId" name='billid' value="{{$order->billid}}">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="date" class="col-sm-2 col-form-label ">Date</label>
                             <div class="col-sm-10">
-                            <input type="text" readonly class="form-control-plaintext text-secondary" id="staticDate" value="12/3/2563">
+                            <input type="text" readonly class="form-control-plaintext text-secondary" id="staticDate" value="{{Carbon\Carbon::parse($order->date)->toDateString()}}">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="sumquantityfurniture" class="col-sm-2 col-form-label ">Sum Quantity</label>
                             <div class="col-sm-10">
-                            <input type="text" readonly class="form-control-plaintext text-secondary" id="staticQuantity" value="10">
+                            <input type="text" readonly class="form-control-plaintext text-secondary" id="staticQuantity" value="{{$order->sum_quantity}}">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="totalprice" class="col-sm-2 col-form-label ">Total Price</label>
                             <div class="col-sm-10">
-                            <input type="text" readonly class="form-control-plaintext text-secondary" id="staticTotalPrice" value="60000">
+                            <input type="text" readonly class="form-control-plaintext text-secondary" id="staticTotalPrice" value="{{$order->totalprice}}">
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="payment" class="col-sm-2 col-form-label ">Payment</label>
-                            <div class="col-sm-10">
-                            <input type="text" readonly class="form-control-plaintext text-secondary" id="staticPayment" value="credit">
-                            </div>
-                        </div>
-                    </form>
                 </div>
                 <div class="row mt-4">
                     <div class="col" style=" text-align: center;">
-                        <button type="button" class="btn btn-dark">cancle</button>
-                        <button type="button" class="btn btn-danger" style="margin-left: 30px;">delete</button>
+                        <a href="/order" type="button" class="btn btn-dark" > cancle </a>
+                        <button type="submit" class="btn btn-danger ml-3" >delete</button>
                     </div>
                 </div>
             </div>
 
         </div>
     </div>
+    </form>
     
 </body>
 </html>

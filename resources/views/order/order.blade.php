@@ -1,6 +1,5 @@
 
 <html>
-    <br>
     <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- CSS only -->
@@ -13,6 +12,12 @@
     <meta charset="UTF-8">
     </head>
     <body >
+
+    {{-- <?php 
+        print_r($orders);
+    ?> --}}
+
+
         <div class="container" style="margin-left: 0; margin-top: 40px">
             <div class="row">
                 <div class="col-2" >
@@ -23,8 +28,8 @@
                         <div class="col mt-4">
                             <input class="form-control" type="text" placeholder="Search" aria-label="Search">
                         </div>
-                        <div class="col mt-3">
-                            <button class="btn btn-primary">Add New</button>
+                        <div class="col mt-3" >
+                            <a href="/addorder" class="btn btn-primary" >Add New</a>
                         </div>
                     </div>
                     <div class="row" style="margin-top: 30px;">  
@@ -37,43 +42,51 @@
                                         <th>วันที่</th>
                                         <th>จำนวนสินค้ารวม</th>
                                         <th>ราคารวม</th>
-                                        <th>วิธีชำระเงิน</th>
                                         <th>action</th>
-
+                                        <th>action</th>
+                                        <th>สถานะการชำระเงิน</th>
+                                        <th>สถานะการจัดส่ง</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($orders as $order)
                                     <tr>
-                                        <td>1</td>
-                                        <td>TB-10001</td>
-                                        <td>โต๊ะพับ</td>
-                                        <td>150</td>
-                                        <td>2</td>
-                                        <td>300</td>
-                                        <td class="text-danger">ลบ</td>
-
+                                        <td>{{$loop->index + 1}}</td>
+                                        <td>{{$order->billid}}</td>
+                                        <td>{{Carbon\Carbon::parse($order->date)->toDateString()}}</td>
+                                        <td>{{$order->sum_quantity}}</td>
+                                        <td>{{$order->totalprice}}</td>
+                                        <td >
+                                           <a href="/deleteorder/{{$order->billid}}" class="text-danger">ลบ</a>
+                                        </td>
+                                        <td >
+                                            <a href="/editorder/{{$order->billid}}" class="text-primary">แก้ไข</a>
+                                        </td>
+                                        <td>
+                                            @if($order->paymentStatusName == "ชำระแล้ว")
+                                                <button type="button" class="btn btn-info">ชำระแล้ว</button>
+                                            @else
+                                                <button type="button" class="btn btn-warning">ยังไม่ได้ชำระ</button>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            @if($order->deliveryStatusName == "ยังไม่ได้ส่ง")
+                                                <button type="button" class="btn btn-warning">ยังไม่ได้ส่ง</button>
+                                            @elseif($order->deliveryStatusName == "ส่งสำเร็จ")
+                                                <button type="button" class="btn btn-success">ส่งสำเร็จ</button>
+                                            @elseif($order->deliveryStatusName == "กำลังส่ง")
+                                                <button type="button" class="btn btn-info">กำลังส่ง</button>
+                                            @elseif($order->deliveryStatusName == "ล้มเหลว")
+                                                <button type="button" class="btn btn-danger">ส่งล้มเหลว</button>
+                                            @elseif($order->deliveryStatusName == "ส่งคืนค้า")
+                                                <button type="button" class="btn btn-dark">ตีกลับสินค้า</button>
+                                            @else
+                                                <button type="button" class="btn btn-secondary">ไม่ระบุ</button>
+                                            @endif
+                                        </td>
                                     </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>TB-10002</td>
-                                        <td>โต๊ะญี่ปุ่นสีเขียว</td>
-                                        <td>175</td>
-                                        <td>1</td>
-                                        <td>175</td>
-                                        <td class="text-danger">ลบ</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>CH-00001</td>
-                                        <td>เก้าอี้ไม้</td>
-                                        <td>500</td>
-                                        <td>1</td>
-                                        <td>500</td>
-                                        <td class="text-danger">ลบ</td>
-
-                                    </tr>
-                                    </tbody>
+                                    @endforeach
+                                </tbody>
                                 </table>
                             </div>
                     </div>  
