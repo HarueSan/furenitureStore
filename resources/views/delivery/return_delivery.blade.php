@@ -28,6 +28,16 @@
                     </div>
                 </div>
             </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col-2">
+                        <p>ชื่อสินค้า</p>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="เก้าอี้ไม้" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </div>
+            </div>
                 <div class="row">
                     <div class="col-2">
                         <p>ราคา</p>
