@@ -1,13 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
 <html>
     <br>
     <head>
+    <title>Add Furniture</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- CSS only -->
+    <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<<<<<<< HEAD
-
-=======
->>>>>>> 8f7de740e49a20cfc0d0190978e13e7246468eb6
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -23,6 +22,14 @@
                 <div class="col">
                     <div class="row">
                         <div class="col-2">
+                            <p>Date</p>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" placeholder="DD/MM/YYYY" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 20px">
+                        <div class="col-2">
                             <p>Name</p>
                         </div>
                         <div class="col-6">
@@ -35,7 +42,7 @@
                         </div>
                         <div class="col-6">
                             <div class="input-group">
-                            <input type="float" class="form-control" aria-label="Baht price">
+                                <input type="number" class="form-control" aria-label="Baht price">
                                 <div class="input-group-append">
                                     <span class="input-group-text">Baht</span>
                                 </div>
@@ -47,11 +54,7 @@
                             <p>Type</p>
                         </div>
                         <div class="col-3">
-<<<<<<< HEAD
                             <select name="furnitureType1" id="" class="form-control" >
-=======
-                            <select name="furnitureType1" id="" class="form-control">
->>>>>>> 8f7de740e49a20cfc0d0190978e13e7246468eb6
                                 <option selected>ประเภท...</option>
                                 <option value="1234">ประเภทเดี่ยว</option>
                                 <option value="3456">ประเภทชุด</option>
@@ -67,6 +70,32 @@
                                 <option value="3456">ห้องนั่งเล่น</option>
                                 <option value="3456">นอกบ้าน</option>
                             </select>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 20px">
+                        <div class="col-2">
+                            <p>Quantity</p>
+                        </div>
+                        <div class="col-6">
+                            <div class="input-group">
+                                <input type="number" class="form-control" aria-label="Baht price">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">ชิ้น</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 20px">
+                        <div class="col-2">
+                            <p>Color</p>
+                        </div>
+                        <div class="col-6">
+                            <div class="input-group">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">สี</span>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Baht price">
+                            </div>
                         </div>
                     </div>
                     <div class="row" style="margin-top: 20px">
@@ -87,8 +116,4 @@
             </div>
         </div>
     </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> 8f7de740e49a20cfc0d0190978e13e7246468eb6

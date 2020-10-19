@@ -1,6 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
 <html>
     <br>
     <head>
+    <title>Edit Customer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -38,29 +41,15 @@
                             <p>Tel</p>
                         </div>
                         <div class="col-6">
-                            <input type="float" class="form-control" placeholder="081-111-1111" aria-label="Name input" aria-describedby="inputGroup-sizing-default">
+                            <input type="number" class="form-control" placeholder="081-111-1111" aria-label="Name input" aria-describedby="inputGroup-sizing-default">
                         </div>
                     </div>
                     <div class="row" style="margin-top: 20px">
                         <div class="col-2">
                             <p>Address</p>
                         </div>
-                        <div class="col-3">
-                        <textarea class="form-control" placeholder="อำเภอดอยสะเก็ด" aria-label="address1"></textarea>
-                        </div>
-                        <div class="col-3">
-                            <select name="address2" id="" class="form-control">
-                                <option selected>จังหวัด...</option>
-                                <option value="01">เชียงใหม่</option>
-                                <option value="02">เชียงราย</option>
-                                <option value="03">ลำปาง</option>
-                                <option value="04">ลำพูน</option>
-                                <option value="05">แพร่</option>
-                                <option value="06">น่าน</option>
-                                <option value="07">พะเยา</option>
-                                <option value="08">แม่ฮ่องสอน</option>
-                                <option value="09">อุตรดิตถ์</option>
-                            </select>
+                        <div class="col-6">
+                        <textarea class="form-control" placeholder="อำเภอดอยสะเก็ด จังหวัดเชียงใหม่" aria-label="address1"></textarea>
                         </div>
                     </div>
                     <div class="row" style="margin-top: 20px">

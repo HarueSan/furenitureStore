@@ -27,7 +27,6 @@ Route::get('/deletefurniture', function () {
     return view('furniture/delete_furniture');
 });
 //Customer
-
 Route::get('/customer', function () {
     return view('customer/customer');
 });
@@ -40,22 +39,10 @@ Route::get('/editcustomer', function () {
 Route::get('/deletecustomer', function () {
     return view('customer/delete_customer');
 });
-Route::get('/customerinfo', function(){
-    return view('customer/customer_information');
-});
-
-//Order or Bill
-Route::get('/order', function () {
-    //$x = DB::select('select * from bill');
-    return view('order/order');
-    //return $x;
-});
-
 //Order or Bill
 Route::get('/order', function () {
     return view('order/order');
 });
-
 Route::get('/addorder',function(){
     return view('order/add_order');
 });
