@@ -58,7 +58,6 @@ Route::post('/deleteBillDetail/{id}',[OrderController::class,'deleteOrderFromBil
 Route::post('/confrimToPay/{id}',[OrderController::class,'confirmPayment']);
 Route::post('/cancelOrder/{id}',[OrderController::class,'cancelBill']);
 
-
 /*-----------------------------****************-----------------------------*/
 // ใช้ get เพื่อดึงข้อมูลจาก database ไปแสดงผลบนหน้าเว็บ
 // ใช้ post เพื่อเพิ่มข้อมูลลงใน database หรือแก้ไขข้อมูล
@@ -67,14 +66,26 @@ Route::post('/cancelOrder/{id}',[OrderController::class,'cancelBill']);
 
 
 //delivery
+use App\Http\Controllers\Delivery\DeliveryController;
+
 Route::get('/editdelivery',function(){
     return view('delivery/edit_delivery');
 });
 Route::get('/returndelivery',function(){
     return view('delivery/return_delivery');
 });
+Route::get('/deliverydetail',function(){
+    return view('delivery/delivery_detail');
+});
 //Report parts
 Route::get('/report',function(){
     return view('report/reporter');
 });
+
+//Deliver or return
+
+Route::get('/delivery',[DeliveryController::class,'home']); //'home' is a function name in Controllers\Delivery\DeliveryController
+
+//Route::get('/editdelivery/{id}',[DeliveryController::class,'editOrder']);
+//Route::get('/returndelivery/{id}',[DeliveryController::class,'returnDeliveryOrder']);
 

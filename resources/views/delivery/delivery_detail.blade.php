@@ -13,6 +13,10 @@
         <meta charset="UTF-8">
     </head>
     <body>
+    <?php
+        print_r($deliveries);
+    ?>
+
         <div class="container" style="margin-left: 0; margin-top: 40px">
             <div class="row">
                 <div class="col-2" >
@@ -42,7 +46,7 @@
                                         <td>กำลังส่ง</td>
                                         <td>
                                         <button type="button" class="btn btn-success">Edit</button>
-                                        <button type="button" class="btn btn-danger">Delete</button>
+                                        <button type="button" class="btn btn-danger">Return</button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -52,7 +56,7 @@
                                         <td>ยังไม่ได้ส่ง</td>
                                         <td>
                                             <button type="button" class="btn btn-success">Edit</button>
-                                            <button type="button" class="btn btn-danger">Delete</button>
+                                            <button type="button" class="btn btn-danger">Return</button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -62,7 +66,7 @@
                                         <td>ส่งสำเร็จ</td>
                                         <td>
                                             <button type="button" class="btn btn-success">Edit</button>
-                                            <button type="button" class="btn btn-danger">Delete</button>
+                                            <button type="button" class="btn btn-danger">Return</button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -72,7 +76,7 @@
                                         <td>ล้มเหลว</td>
                                         <td>
                                             <button type="button" class="btn btn-success">Edit</button>
-                                            <button type="button" class="btn btn-danger">Delete</button>
+                                            <button type="button" class="btn btn-danger">Return</button>
                                         </td>
                                     </tr>
                                     </tbody>
