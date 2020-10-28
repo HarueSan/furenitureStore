@@ -67,6 +67,7 @@ Route::post('/cancelOrder/{id}',[OrderController::class,'cancelBill']);
 
 //delivery
 use App\Http\Controllers\Delivery\DeliveryController;
+use Illuminate\Http\Request;
 
 Route::get('/editdelivery',function(){
     return view('delivery/edit_delivery');
@@ -82,10 +83,10 @@ Route::get('/report',function(){
     return view('report/reporter');
 });
 
-//Deliver or return
+//Controller route for edit and return
 
 Route::get('/delivery',[DeliveryController::class,'home']); //'home' is a function name in Controllers\Delivery\DeliveryController
+Route::get('/editdelivery/{id}',[DeliveryController::class,'editDelivery']);
+Route::get('/returndelivery/{id}',[DeliveryController::class,'returnDelivery']);
 
-//Route::get('/editdelivery/{id}',[DeliveryController::class,'editOrder']);
-//Route::get('/returndelivery/{id}',[DeliveryController::class,'returnDeliveryOrder']);
-
+Route::post('deletedelivery/{id}',[DeliveryController::class,'deleteDelivery']);//คืนสินค้ากลับไป
