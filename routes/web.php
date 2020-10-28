@@ -26,6 +26,20 @@ Route::get('/editfurniture', function () {
 Route::get('/deletefurniture', function () {
     return view('furniture/delete_furniture');
 });
+use App\Http\Controllers\Furniture\FurnitureController;
+
+Route::get('/furniture',[FurnitureController::class,'index']);
+
+Route::get('/deletefurniture/{id}',[FurnitureController::class,'deletePage']);
+Route::post('/deletefurniture/{id}',[FurnitureController::class,'postDelete']);
+
+Route::get('/editfurniture/{id}',[FurnitureController::class,'editPage']);
+Route::post('/addpicture/{id}',[FurnitureController::class,'addPictureToEdit']);
+Route::post('/deletepicture/{id}',[FurnitureController::class,'deletePictureToEdit']);
+Route::post('/updatefurniture/{id}',[FurnitureController::class,'postUpdate']);
+
+Route::get('/addfurniture', [FurnitureController::class,'addPage']);
+Route::post('/addfurnituretolist',[FurnitureController::class,'postAdd']);
 
 //Customer
 use App\Http\Controllers\Customer\CustomerController;
@@ -44,7 +58,6 @@ use App\Http\Controllers\Order\OrderController;
 Route::get('/order',[OrderController::class,'index']); //'index' is functionname in Controllers\Order\OrderController
 Route::get('/addorder', [OrderController::class,'showAddorderPage']);
 Route::get('/editorder/{id}',[OrderController::class,'showEditorderPage']);
-
 Route::get('/deleteorder/{id}',[OrderController::class,'deletePage']);
 
 Route::post('/addHeadbill',[OrderController::class,'addHeadbill']);
@@ -63,6 +76,7 @@ Route::post('/cancelOrder/{id}',[OrderController::class,'cancelBill']);
 
 //delivery
 use App\Http\Controllers\Delivery\DeliveryController;
+use Illuminate\Http\Request;
 
 Route::get('/editdelivery',function(){
     return view('delivery/edit_delivery');
@@ -78,10 +92,10 @@ Route::get('/report',function(){
     return view('report/reporter');
 });
 
-//Deliver or return
+//Controller route for edit and return
 
 Route::get('/delivery',[DeliveryController::class,'home']); //'home' is a function name in Controllers\Delivery\DeliveryController
+Route::get('/editdelivery/{id}',[DeliveryController::class,'editDelivery']);
+Route::get('/returndelivery/{id}',[DeliveryController::class,'returnDelivery']);
 
-//Route::get('/editdelivery/{id}',[DeliveryController::class,'editOrder']);
-//Route::get('/returndelivery/{id}',[DeliveryController::class,'returnDeliveryOrder']);
-
+Route::post('deletedelivery/{id}',[DeliveryController::class,'deleteDelivery']);//คืนสินค้ากลับไป

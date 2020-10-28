@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <html>
-    <br>
     <head>
     <title>Furniture</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,6 +13,9 @@
     <meta charset="UTF-8">
     </head>
     <body>
+        <!-- <?php
+            print_r($furnitures);
+        ?> -->
         <div class="container" style="margin-left: 0; margin-top: 40px">
             <div class="row">
                 <div class="col-2" >
@@ -25,11 +27,11 @@
                             <h1>Furniture Detail</h1>
                         </div>
                         <div class="col mt-4">
-                            <button class="btn btn-primary">Add New</button>
+                            <a class="btn btn-primary" href="/addfurniture">Add New</a>
                         </div>
                     </div>
                     <div class="row" style="margin-top: 30px;">
-                        <div class="">
+                        <div class="col">
                             <table class="table">
                                 <thead class="thead-dark">
                                     <tr>
@@ -45,57 +47,23 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($furnitures as $fur)
                                     <tr>
-                                        <td>20/10/2020</td>
-                                        <td><img src="https://via.placeholder.com/100" class="rounded mx-auto d-block" alt="..."></td>
-                                        <td>โต๊ะพับ</td>
-                                        <td>150</td>
+                                        <td>{{Carbon\Carbon::parse($fur->date)->toDateString()}}</td>
+                                        <td><img src="{{$fur->url}}" class="rounded mx-auto d-block" style="width: 100px
+                                        " alt="..."></td>
+                                        <td>{{$fur->name}}</td>
+                                        <td>{{$fur->price}}</td>
+                                        <td>{{$fur->typename}}</td>
+                                        <td>{{$fur->quantity}}</td>
+                                        <td>{{$fur->colorname}}</td>
+                                        <td>{{$fur->description}}</td>
                                         <td>
-                                            <div class="col">ประเภทเดี่ยว</div>
-                                            <div class="col">ห้องนั่งเล่น</div>
-                                        </td>
-                                        <td>18</td>
-                                        <td>ขาว</td>
-                                        <td>โต๊ะที่สามารถพับเก็บได้</td>
-                                        <td>
-                                            <button type="button" class="btn btn-success">Edit</button>
-                                            <button type="button" class="btn btn-danger">Delete</button>
+                                            <a class="btn btn-success" href="/editfurniture/{{$fur->furnitureid}}">Edit</a>
+                                            <a class="btn btn-danger" href="/deletefurniture/{{$fur->furnitureid}}">Delete</a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>18/10/2020</td>
-                                        <td><img src="https://via.placeholder.com/100" class="rounded mx-auto d-block" alt="..."></td>
-                                        <td>โต๊ะญี่ปุ่นสีเขียว</td>
-                                        <td>175</td>
-                                        <td>
-                                            <div class="col">ประเภทเดี่ยว</div>
-                                            <div class="col">ห้องรับแขก</div>
-                                        </td>
-                                        <td>30</td>
-                                        <td>น้ำตาล</td>
-                                        <td>โต๊ะขนาดเล็ก สีเขียว รูปแบบจากญี่ปุ่น</td>
-                                        <td>
-                                            <button type="button" class="btn btn-success">Edit</button>
-                                        <button type="button" class="btn btn-danger">Delete</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>9/10/2020</td>
-                                        <td><img src="https://via.placeholder.com/100" class="rounded mx-auto d-block" alt="..."></td>
-                                        <td>เก้าอี้ไม้</td>
-                                        <td>500</td>
-                                        <td>
-                                            <div class="col">ประเภทเดี่ยว</div>
-                                            <div class="col">นอกบ้าน</div>
-                                        </td>
-                                        <td>27</td>
-                                        <td>น้ำตาล</td>
-                                        <td>เก้าที่ทำจากไม้แท้ เคลือบมันอย่างดี</td>
-                                        <td>
-                                            <button type="button" class="btn btn-success">Edit</button>
-                                            <button type="button" class="btn btn-danger">Delete</button>
-                                        </td>
-                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
