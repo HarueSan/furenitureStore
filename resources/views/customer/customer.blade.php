@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     </head>
     <body >
-    <!-- <?php 
+    <!-- <?php
         print_r($customers);
     ?> -->
         <div class="container" style="margin-left: 0; margin-top: 40px">
@@ -28,7 +28,7 @@
                             <h1>Customer Detail</h1>
                         </div>
                         <div class="col mt-4">
-                            <button class="btn btn-primary">Add New</button>
+                            <a class="btn btn-primary" href="/addcustomer">Add New</a>
                         </div>
                     </div>
                     <div class="row" style="margin-top: 30px;">
@@ -53,8 +53,8 @@
                                         <td>{{$cust->address}}</td>
                                         <td>{{$cust->email}}</td>
                                         <td>
-                                            <button type="button" class="btn btn-success">Edit</button>
-                                            <button type="button" class="btn btn-danger">Delete</button>
+                                            <a class="btn btn-success" href="/editcustomer/{{$cust->custid}}">Edit</a>
+                                            <a class="btn btn-danger" href="/deletecustomer/{{$cust->custid}}">Delete</a>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -67,3 +67,6 @@
         </div>
     </body>
 </html>
+
+
+
