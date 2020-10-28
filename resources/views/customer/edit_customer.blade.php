@@ -20,12 +20,14 @@
                     @include('menubar')
                 </div>
                 <div class="col">
+                <form method="post" action="/updatecustomer/{{$cust->custid}}">
+                    @csrf
                     <div class="row">
                         <div class="col-2">
                             <p>First Name</p>
                         </div>
                         <div class="col-6">
-                            <input type="text" class="form-control" placeholder="{{$customer->lname}}" aria-label="Name input" aria-describedby="inputGroup-sizing-default">
+                            <input type="text" name="fname" class="form-control" placeholder="{{$cust->lname}}">
                         </div>
                     </div>
                     <div class="row" style="margin-top: 20px">
@@ -33,7 +35,7 @@
                             <p>Last Name</p>
                         </div>
                         <div class="col-6">
-                            <input type="text" class="form-control" placeholder="{{$customer->lname}}" aria-label="Name input" aria-describedby="inputGroup-sizing-default">
+                            <input type="text" name="lname" class="form-control" placeholder="{{$cust->lname}}">
                         </div>
                     </div>
                     <div class="row" style="margin-top: 20px">
@@ -45,7 +47,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">+88</span>
                                 </div>
-                                <input type="number" class="form-control" placeholder="XX-XXX-XXXX">
+                                <input type="number" name="telphone" class="form-control" placeholder="{{$cust->telphone}}">
                             </div>
                         </div>
                     </div>
@@ -54,7 +56,7 @@
                             <p>Address</p>
                         </div>
                         <div class="col-6">
-                        <textarea class="form-control" placeholder="{{$customer->address}}" aria-label="address1"></textarea>
+                        <textarea class="form-control" name="address" placeholder="{{$cust->address}}"></textarea>
                         </div>
                     </div>
                     <div class="row" style="margin-top: 20px">
@@ -62,15 +64,16 @@
                             <p>Email</p>
                         </div>
                         <div class="col-6">
-                            <input type="float" class="form-control" placeholder="{{$customer->email}}" aria-label="Name input" aria-describedby="inputGroup-sizing-default">
+                            <input type="text" name="email" class="form-control" placeholder="{{$cust->email}}">
                         </div>
                     </div>
                     <div class="row" style="margin-left: 10%; margin-top: 20px">
                         <div class="col" style=" text-align: center;">
-                            <button type="button" class="btn btn-warning">Cancel</button>
-                            <button type="button" class="btn btn-dark" style="margin-left: 30px;">Update</button>
+                            <a href="/customer" type="button" class="btn btn-warning">Cancle</a>
+                            <button type="submit" class="btn btn-dark" style="margin-left: 30px;">Update</button>
                         </div>
                     </div>
+                </form>
                 </div>
             </div>
         </div>
