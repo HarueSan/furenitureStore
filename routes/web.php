@@ -104,4 +104,4 @@ Route::get('/delivery',[DeliveryController::class,'home']); //'home' is a functi
 Route::get('/editdelivery/{id}',[DeliveryController::class,'editDelivery']);
 Route::get('/returndelivery/{id}',[DeliveryController::class,'returnDelivery']);
 
-Route::post('deletedelivery/{id}',[DeliveryController::class,'deleteDelivery']);//คืนสินค้ากลับไป
+Route::post('deletedelivery/{id}',[DeliveryController::class,'deleteDelivery']);//คืนสินค้ากลับไป และระบุจำนวน
