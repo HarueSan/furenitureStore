@@ -14,6 +14,7 @@
     <meta charset="UTF-8">
 </head>
 <body>
+
 <form method="post" action="/deletecustomer/{{$cust->custid}}">
         @csrf
     <div class="container" style="margin-left: 0; margin-top: 40px">
@@ -69,6 +70,3 @@
 </form>
 </body>
 </html>
-
-
-
