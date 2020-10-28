@@ -14,18 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Furniture
-Route::get('/furniture', function () {
-    return view('furniture/furniture');
-});
-Route::get('/addfurniture', function () {
-    return view('furniture/add_furniture');
-});
-Route::get('/editfurniture', function () {
-    return view('furniture/edit_furniture');
-});
-Route::get('/deletefurniture', function () {
-    return view('furniture/delete_furniture');
-});
+use App\Http\Controllers\Furniture\FurnitureController;
+
+Route::get('/furniture',[FurnitureController::class,'index']);
+
+Route::get('/deletefurniture/{id}',[FurnitureController::class,'deletePage']);
+Route::post('/deletefurniture/{id}',[FurnitureController::class,'postDelete']);
+
+Route::get('/editfurniture/{id}',[FurnitureController::class,'editPage']);
+Route::post('/addpicture/{id}',[FurnitureController::class,'addPictureToEdit']);
+Route::post('/deletepicture/{id}',[FurnitureController::class,'deletePictureToEdit']);
+Route::post('/updatefurniture/{id}',[FurnitureController::class,'postUpdate']);
+
+Route::get('/addfurniture', [FurnitureController::class,'addPage']);
+Route::post('/addfurnituretolist',[FurnitureController::class,'postAdd']);
+
 //Customer
 Route::get('/customer', function () {
     return view('customer/customer');
@@ -48,7 +51,6 @@ use App\Http\Controllers\Order\OrderController;
 Route::get('/order',[OrderController::class,'index']); //'index' is functionname in Controllers\Order\OrderController
 Route::get('/addorder', [OrderController::class,'showAddorderPage']);
 Route::get('/editorder/{id}',[OrderController::class,'showEditorderPage']);
-
 Route::get('/deleteorder/{id}',[OrderController::class,'deletePage']);
 
 Route::post('/addHeadbill',[OrderController::class,'addHeadbill']);
