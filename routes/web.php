@@ -41,14 +41,20 @@ Route::post('/updatefurniture/{id}',[FurnitureController::class,'postUpdate']);
 Route::get('/addfurniture', [FurnitureController::class,'addPage']);
 Route::post('/addfurnituretolist',[FurnitureController::class,'postAdd']);
 
+
 //Customer
 use App\Http\Controllers\Customer\CustomerController;
 
 Route::get('/customer',[CustomerController::class,'index']);
-Route::get('/addcustomer', [CustomerController::class,'showAddcustomerPage']);
-Route::get('/editcustomer/{id}',[ustomerController::class,'showEditcustomerPage']);
-Route::post('/deletecustomer/{id}',[CustomerController::class,'postDelete']);
+
+Route::get('/addcustomer', [CustomerController::class,'addPage']);
+Route::post('/addcustomertolist',[CustomerController::class,'postAdd']);
+
+Route::get('/editcustomer/{id}',[CustomerController::class,'editPage']);
+Route::post('/updatecustomer/{id}',[CustomerController::class,'postUpdate']);
+
 Route::get('/deletecustomer/{id}',[CustomerController::class,'deletePage']);
+Route::post('/deletecustomer/{id}',[CustomerController::class,'postDelete']);
 
 /*-----------------------------****************-----------------------------*/
 
