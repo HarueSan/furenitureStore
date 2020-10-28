@@ -26,19 +26,15 @@ Route::get('/editfurniture', function () {
 Route::get('/deletefurniture', function () {
     return view('furniture/delete_furniture');
 });
+
 //Customer
-Route::get('/customer', function () {
-    return view('customer/customer');
-});
-Route::get('/addcustomer', function () {
-    return view('customer/add_customer');
-});
-Route::get('/editcustomer', function () {
-    return view('customer/edit_customer');
-});
-Route::get('/deletecustomer', function () {
-    return view('customer/delete_customer');
-});
+use App\Http\Controllers\Customer\CustomerController;
+
+Route::get('/customer',[CustomerController::class,'index']);
+Route::get('/addcustomer', [CustomerController::class,'showAddcustomerPage']);
+Route::get('/editcustomer/{id}',[ustomerController::class,'showEditcustomerPage']);
+Route::post('/deletecustomer/{id}',[CustomerController::class,'postDelete']);
+Route::get('/deletecustomer/{id}',[CustomerController::class,'deletePage']);
 
 /*-----------------------------****************-----------------------------*/
 
