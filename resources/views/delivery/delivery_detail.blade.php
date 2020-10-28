@@ -12,10 +12,11 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <meta charset="UTF-8">
     </head>
+    <title>รายการจัดส่งสินค้าทั้งหมด</title>
     <body>
-    <?php
-        print_r($deliveries);
-    ?>
+        <!-- <?php
+            print_r($deliveries);
+        ?> -->
 
         <div class="container" style="margin-left: 0; margin-top: 40px">
             <div class="row">
@@ -27,61 +28,30 @@
                         <h2>Delivery List</h2>
                     </div>
                     <div class="row" style="margin-top: 30px;">
-                            <div class="">
-                                <table class="table">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th>ID Bill</th>
-                                        <th>Product</th>
-                                        <th>Address</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>US-1111</td>
-                                        <td>20378, Fort Worth, Texas, USA</td>
-                                        <td>กำลังส่ง</td>
-                                        <td>
-                                        <button type="button" class="btn btn-success">Edit</button>
-                                        <button type="button" class="btn btn-danger">Return</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>TH-1112</td>
-                                        <td>1111 สาทร 39 กรุงเทพมหานคร</td>
-                                        <td>ยังไม่ได้ส่ง</td>
-                                        <td>
-                                            <button type="button" class="btn btn-success">Edit</button>
-                                            <button type="button" class="btn btn-danger">Return</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>KR-00001</td>
-                                        <td>213, Jongno-gu, Seoul, Republic of Korea</td>
-                                        <td>ส่งสำเร็จ</td>
-                                        <td>
-                                            <button type="button" class="btn btn-success">Edit</button>
-                                            <button type="button" class="btn btn-danger">Return</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>JP-0001</td>
-                                        <td>1039, Saitama Perfecture, Japan</td>
-                                        <td>ล้มเหลว</td>
-                                        <td>
-                                            <button type="button" class="btn btn-success">Edit</button>
-                                            <button type="button" class="btn btn-danger">Return</button>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                        <div class="">
+                            <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>ID Bill</th>
+                                    <th>Address</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($deliveries as $delivery)
+                                <tr>
+                                    <td>{{$delivery->id}}</td>
+                                    <td>{{$delivery->address}}</td>
+                                    <td>{{$delivery->deliname}}</td>
+                                    <td>
+                                        <a class="btn btn-danger" href="/editdelivery/{{$delivery->id}}" role="button">Return</a>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
