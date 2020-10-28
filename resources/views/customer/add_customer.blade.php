@@ -20,12 +20,13 @@
                     @include('menubar')
                 </div>
                 <div class="col">
+                @csrf
                     <div class="row">
                         <div class="col-2">
                             <p>First Name</p>
                         </div>
                         <div class="col-6">
-                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            <input type="text" class="form-control" placeholder="ไม่ต้องใส่คำนำหน้า">
                         </div>
                     </div>
                     <div class="row" style="margin-top: 20px">
@@ -33,7 +34,7 @@
                             <p>Last Name</p>
                         </div>
                         <div class="col-6">
-                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            <input type="text" class="form-control">
                         </div>
                     </div>
                     <div class="row" style="margin-top: 20px">
@@ -41,7 +42,12 @@
                             <p>Tel</p>
                         </div>
                         <div class="col-6">
-                            <input type="number" class="form-control" placeholder="XXX-XXX-XXXX" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">+88</span>
+                                </div>
+                                <input type="number" class="form-control" placeholder="XX-XXX-XXXX">
+                            </div>
                         </div>
                     </div>
                     <div class="row" style="margin-top: 20px">
@@ -66,6 +72,7 @@
                             <button type="button" class="btn btn-success" style="margin-left: 30px;">Add</button>
                         </div>
                     </div>
+                    @endforeach
                 </div>
             </div>
         </div>

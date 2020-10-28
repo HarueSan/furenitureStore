@@ -25,7 +25,7 @@
                             <p>First Name</p>
                         </div>
                         <div class="col-6">
-                            <input type="text" class="form-control" placeholder="ขวัญจิรา" aria-label="Name input" aria-describedby="inputGroup-sizing-default">
+                            <input type="text" class="form-control" placeholder="{{$customer->lname}}" aria-label="Name input" aria-describedby="inputGroup-sizing-default">
                         </div>
                     </div>
                     <div class="row" style="margin-top: 20px">
@@ -33,7 +33,7 @@
                             <p>Last Name</p>
                         </div>
                         <div class="col-6">
-                            <input type="text" class="form-control" placeholder="กาเกตุ" aria-label="Name input" aria-describedby="inputGroup-sizing-default">
+                            <input type="text" class="form-control" placeholder="{{$customer->lname}}" aria-label="Name input" aria-describedby="inputGroup-sizing-default">
                         </div>
                     </div>
                     <div class="row" style="margin-top: 20px">
@@ -41,7 +41,12 @@
                             <p>Tel</p>
                         </div>
                         <div class="col-6">
-                            <input type="number" class="form-control" placeholder="081-111-1111" aria-label="Name input" aria-describedby="inputGroup-sizing-default">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">+88</span>
+                                </div>
+                                <input type="number" class="form-control" placeholder="XX-XXX-XXXX">
+                            </div>
                         </div>
                     </div>
                     <div class="row" style="margin-top: 20px">
@@ -49,7 +54,7 @@
                             <p>Address</p>
                         </div>
                         <div class="col-6">
-                        <textarea class="form-control" placeholder="อำเภอดอยสะเก็ด จังหวัดเชียงใหม่" aria-label="address1"></textarea>
+                        <textarea class="form-control" placeholder="{{$customer->address}}" aria-label="address1"></textarea>
                         </div>
                     </div>
                     <div class="row" style="margin-top: 20px">
@@ -57,7 +62,7 @@
                             <p>Email</p>
                         </div>
                         <div class="col-6">
-                            <input type="float" class="form-control" placeholder="kwan@gmail.com" aria-label="Name input" aria-describedby="inputGroup-sizing-default">
+                            <input type="float" class="form-control" placeholder="{{$customer->email}}" aria-label="Name input" aria-describedby="inputGroup-sizing-default">
                         </div>
                     </div>
                     <div class="row" style="margin-left: 10%; margin-top: 20px">

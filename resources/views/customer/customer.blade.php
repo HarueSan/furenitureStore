@@ -14,6 +14,9 @@
     <meta charset="UTF-8">
     </head>
     <body >
+    <!-- <?php 
+        print_r($customers);
+    ?> -->
         <div class="container" style="margin-left: 0; margin-top: 40px">
             <div class="row">
                 <div class="col-2" >
@@ -42,48 +45,19 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                @foreach ($customers as $cust)
                                     <tr>
-                                        <td>ขวัญจิรา</td>
-                                        <td>กาเกตุ</td>
-                                        <td>081-111-1111</td>
-                                        <td>
-                                            <div class="col">อำเภอดอยสะเก็ด</div>
-                                            <div class="col">จังหวัดเชียงใหม่</div>
-                                        </td>
-                                        <td>kwan@gmail.com</td>
+                                        <td>{{$cust->fname}}</td>
+                                        <td>{{$cust->lname}}</td>
+                                        <td>{{$cust->telphone}}</td>
+                                        <td>{{$cust->address}}</td>
+                                        <td>{{$cust->email}}</td>
                                         <td>
                                             <button type="button" class="btn btn-success">Edit</button>
                                             <button type="button" class="btn btn-danger">Delete</button>
                                         </td>
                                     </tr>
-                                    <tr>
-                                    <td>จารุภัทร</td>
-                                        <td>ชัยรักไพ</td>
-                                        <td>082-222-2222</td>
-                                        <td>
-                                            <div class="col">อำเภอเมือง</div>
-                                            <div class="col">จังหวัดลำพูน</div>
-                                        </td>
-                                        <td>ja@gmail.com</td>
-                                        <td>
-                                            <button type="button" class="btn btn-success">Edit</button>
-                                            <button type="button" class="btn btn-danger">Delete</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                    <td>สุนิสา</td>
-                                        <td>สุวรรณ</td>
-                                        <td>083-333-3333</td>
-                                        <td>
-                                            <div class="col">อำเภอเชียงของ</div>
-                                            <div class="col">จังหวัดเชียงราย</div>
-                                        </td>
-                                        <td>su@gmail.com</td>
-                                        <td>
-                                            <button type="button" class="btn btn-success">Edit</button>
-                                            <button type="button" class="btn btn-danger">Delete</button>
-                                        </td>
-                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

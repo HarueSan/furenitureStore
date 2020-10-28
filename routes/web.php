@@ -14,6 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Furniture
+Route::get('/furniture', function () {
+    return view('furniture/furniture');
+});
+Route::get('/addfurniture', function () {
+    return view('furniture/add_furniture');
+});
+Route::get('/editfurniture', function () {
+    return view('furniture/edit_furniture');
+});
+Route::get('/deletefurniture', function () {
+    return view('furniture/delete_furniture');
+});
 use App\Http\Controllers\Furniture\FurnitureController;
 
 Route::get('/furniture',[FurnitureController::class,'index']);
@@ -30,18 +42,13 @@ Route::get('/addfurniture', [FurnitureController::class,'addPage']);
 Route::post('/addfurnituretolist',[FurnitureController::class,'postAdd']);
 
 //Customer
-Route::get('/customer', function () {
-    return view('customer/customer');
-});
-Route::get('/addcustomer', function () {
-    return view('customer/add_customer');
-});
-Route::get('/editcustomer', function () {
-    return view('customer/edit_customer');
-});
-Route::get('/deletecustomer', function () {
-    return view('customer/delete_customer');
-});
+use App\Http\Controllers\Customer\CustomerController;
+
+Route::get('/customer',[CustomerController::class,'index']);
+Route::get('/addcustomer', [CustomerController::class,'showAddcustomerPage']);
+Route::get('/editcustomer/{id}',[ustomerController::class,'showEditcustomerPage']);
+Route::post('/deletecustomer/{id}',[CustomerController::class,'postDelete']);
+Route::get('/deletecustomer/{id}',[CustomerController::class,'deletePage']);
 
 /*-----------------------------****************-----------------------------*/
 
