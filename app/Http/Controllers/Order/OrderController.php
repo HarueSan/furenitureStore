@@ -187,6 +187,36 @@ class OrderController extends Controller
         return redirect("/order");
     
     }
+    //search order
+    function search(Request $request){
+
+        $search = $request->get('search');
+        $headbill = "select 
+                        b.id as billid, 
+                        b.date,
+                        sum(bd.quantity * f.price ) as totalprice,
+                        sum(bd.quantity) as sum_quantity,
+                        ps.name as paymentStatusName,
+                        ds.name as deliveryStatusName
+                    
+                    from headbill b
+                    left join billdetail bd on b.id = bd.headbill_id
+                    left join furniture f on f.id = bd.furniture_id
+                    left join payment_status ps on ps.id = b.paystatus_id
+                    left join delivery_status ds on ds.id = b.delistatus_id
+                    group by b.id
+                    having b.id = ? 
+                    "
+                    ;
+
+        $sql = DB::select($headbill,[$search]);
+        return view('order.search_order', [
+            'orders' => $sql
+        ]);
+
+
+        
+    }
 
 
 

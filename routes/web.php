@@ -17,15 +17,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Furniture\FurnitureController;
 
 Route::get('/furniture',[FurnitureController::class,'index']);
-
 Route::get('/deletefurniture/{id}',[FurnitureController::class,'deletePage']);
 Route::post('/deletefurniture/{id}',[FurnitureController::class,'postDelete']);
-
 Route::get('/editfurniture/{id}',[FurnitureController::class,'editPage']);
 Route::post('/addpicture/{id}',[FurnitureController::class,'addPictureToEdit']);
 Route::post('/deletepicture/{id}',[FurnitureController::class,'deletePictureToEdit']);
 Route::post('/updatefurniture/{id}',[FurnitureController::class,'postUpdate']);
-
 Route::get('/addfurniture', [FurnitureController::class,'addPage']);
 Route::post('/addfurnituretolist',[FurnitureController::class,'postAdd']);
 
@@ -52,6 +49,7 @@ Route::get('/order',[OrderController::class,'index']); //'index' is functionname
 Route::get('/addorder', [OrderController::class,'showAddorderPage']);
 Route::get('/editorder/{id}',[OrderController::class,'showEditorderPage']);
 Route::get('/deleteorder/{id}',[OrderController::class,'deletePage']);
+Route::get('/search',[OrderController::class,'search']);
 
 Route::post('/addHeadbill',[OrderController::class,'addHeadbill']);
 Route::post('/addFurnitureToOrder/{id}',[OrderController::class,'addFurnitureToOrder']);
@@ -59,6 +57,7 @@ Route::post('/deleteorder/{id}',[OrderController::class,'postDelete']);
 Route::post('/deleteBillDetail/{id}',[OrderController::class,'deleteOrderFromBillDetail']);
 Route::post('/confrimToPay/{id}',[OrderController::class,'confirmPayment']);
 Route::post('/cancelOrder/{id}',[OrderController::class,'cancelBill']);
+
 
 /*-----------------------------****************-----------------------------*/
 // ใช้ get เพื่อดึงข้อมูลจาก database ไปแสดงผลบนหน้าเว็บ
