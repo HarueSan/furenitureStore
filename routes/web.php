@@ -102,6 +102,6 @@ Route::get('/report',function(){
 
 Route::get('/delivery',[DeliveryController::class,'home']); //'home' is a function name in Controllers\Delivery\DeliveryController
 Route::get('/editdelivery/{id}',[DeliveryController::class,'editDelivery']);
-Route::get('/returndelivery/{id}',[DeliveryController::class,'returnDelivery']);
+Route::get('/returndelivery/{id}',[DeliveryController::class,'returnDeliveryPage']);
 
-Route::post('returndelivery/{id}',[DeliveryController::class,'deleteDelivery']);//คืนสินค้ากลับไป และระบุจำนวน
+Route::post('returndelivery/{id}',[DeliveryController::class,'returnDelivery']);//คืนสินค้ากลับไปทั้งหมด
