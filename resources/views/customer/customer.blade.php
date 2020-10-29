@@ -14,6 +14,9 @@
     <meta charset="UTF-8">
     </head>
     <body >
+    <!-- <?php
+        print_r($customers);
+    ?> -->
         <div class="container" style="margin-left: 0; margin-top: 40px">
             <div class="row">
                 <div class="col-2" >
@@ -25,7 +28,7 @@
                             <h1>Customer Detail</h1>
                         </div>
                         <div class="col mt-4">
-                            <button class="btn btn-primary">Add New</button>
+                            <a class="btn btn-primary" href="/addcustomer">Add New</a>
                         </div>
                     </div>
                     <div class="row" style="margin-top: 30px;">
@@ -42,48 +45,19 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                @foreach ($customers as $cust)
                                     <tr>
-                                        <td>ขวัญจิรา</td>
-                                        <td>กาเกตุ</td>
-                                        <td>081-111-1111</td>
+                                        <td>{{$cust->fname}}</td>
+                                        <td>{{$cust->lname}}</td>
+                                        <td>{{$cust->telphone}}</td>
+                                        <td>{{$cust->address}}</td>
+                                        <td>{{$cust->email}}</td>
                                         <td>
-                                            <div class="col">อำเภอดอยสะเก็ด</div>
-                                            <div class="col">จังหวัดเชียงใหม่</div>
-                                        </td>
-                                        <td>kwan@gmail.com</td>
-                                        <td>
-                                            <button type="button" class="btn btn-success">Edit</button>
-                                            <button type="button" class="btn btn-danger">Delete</button>
+                                            <a class="btn btn-success" href="/editcustomer/{{$cust->custid}}">Edit</a>
+                                            <a class="btn btn-danger" href="/deletecustomer/{{$cust->custid}}">Delete</a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                    <td>จารุภัทร</td>
-                                        <td>ชัยรักไพ</td>
-                                        <td>082-222-2222</td>
-                                        <td>
-                                            <div class="col">อำเภอเมือง</div>
-                                            <div class="col">จังหวัดลำพูน</div>
-                                        </td>
-                                        <td>ja@gmail.com</td>
-                                        <td>
-                                            <button type="button" class="btn btn-success">Edit</button>
-                                            <button type="button" class="btn btn-danger">Delete</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                    <td>สุนิสา</td>
-                                        <td>สุวรรณ</td>
-                                        <td>083-333-3333</td>
-                                        <td>
-                                            <div class="col">อำเภอเชียงของ</div>
-                                            <div class="col">จังหวัดเชียงราย</div>
-                                        </td>
-                                        <td>su@gmail.com</td>
-                                        <td>
-                                            <button type="button" class="btn btn-success">Edit</button>
-                                            <button type="button" class="btn btn-danger">Delete</button>
-                                        </td>
-                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -93,3 +67,6 @@
         </div>
     </body>
 </html>
+
+
+

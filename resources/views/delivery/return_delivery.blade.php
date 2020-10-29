@@ -14,31 +14,31 @@
     </head>
     </br>
     <body>
-        <div class="container" style="margin-left:auto; margin-top: 40px">
+    <?php print_r($delivery);?>
+        <form method="post" action="returndelivery/{id}">
+            @csrf
+        <div class="container" style="margin-left:auto; margin-top:auto">
             <div class="row">
                 <div class="col-2">
                     @include('menubar')
                 </div>
                 <div class="col">
                     <div class="row">
-                        <div class="col-2">
-                            <p>ID Bill</p>
-                        </div>
-                        <div class="col-6">
-                            <input type="text" class="form-control" placeholder="i.e.JP-0001" aria-describedby="inputGroup-sizing-default">
-                        </div>
+                    <h2>แบบฟอร์มการคืนสินค้า</h2>
                     </div>
                     <div class="row" style="margin-top: 20px">
                         <div class="col-2">
-                            <p>ชื่อสินค้า</p>
+                            <div class="form-group">
+                                <p>ชื่อสินค้า</p>
+                            </div>
                         </div>
                         <div class="col-6">
-                            <input type="text" class="form-control" placeholder="i.e.เก้าอี้ไม้" aria-describedby="inputGroup-sizing-default">
+
                         </div>
                     </div>
                     <div class="row" style="margin-top: 20px;">
                         <div class="col-2">
-                            <p>จำนวนสินค้า</p>
+                            <p>จำนวนสินค้าที่จะขอคืน</p>
                         </div>
                         <div class="col-6">
                             <div class="input-group">
@@ -48,36 +48,24 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
                     <div class="row" style="margin-top: 20px;">
-                        <div class="col-2">
+                        <div class="col-3 mt-4" >
                             <p>เหตุผลในการคืนสินค้า</p>
                         </div>
-                        <div class="col-6">
-                        <input type="text" class="form-control" placeholder="กรุณาพิมพ์..." aria-describedby="inputGroup-sizing-default">
+                        <div class="col mt-4">
+                            <textarea type="text" class="form-control" placeholder="กรุณาพิมพ์..."></textarea>
                         </div>
                     </div>
-                    <div class="row" style="margin-top: 20px;">
-                        <div class="col-2">
-                            <p>ช่องทางการคืนเงิน</p>
-                        </div>
-                        <div class="col-3">
-                            <select name="refundMethod" id="" class="form-control">
-                                <option selected>ตัวเลือก...</option>
-                                <option value="1234">บัตรเครดิต/เดบิต</option>
-                                <option value="3456">เก็บเงินปลายทาง</option>
-                                <option value="3456">ผ่อนชำระ</option>
-                            </select>
-                        </div>
                     </div>
-                    <div class="row" style="margin-left: 10%; margin-top: 20px">
-                        <div class="col" style=" text-align: center;">
-                            <button type="button" class="btn btn-warning">Cancel</button>
-                            <button type="button" class="btn btn-success" style="margin-left: 30px;">OK</button>
-                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <a class="btn btn-danger" href="/delivery" role="button">Cancel</a>
+                            <button type="submit" class="btn btn-warning" style="margin-left: 30px;">OK</button>
+                        </div>
                     </div>
                 </div>
+            </div>
         </div>
-    </div>
+        </form>
 </body>
 </html>

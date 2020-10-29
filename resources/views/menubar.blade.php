@@ -46,14 +46,14 @@
                         </div>
                         <div>
                             <li class="nav-item">
-                                <a class="nav-link active" href="/deliverydetail#">4. Delivery</a>
+                                <a class="nav-link active" href="/delivery">4. Delivery</a>
                             </li>
                             <div style="padding-left: 25px;">
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="/editdelivery#">Edit</a>
+                                    <a class="nav-link active" href="/editdelivery">Edit</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="/returndelivery#">Return</a>
+                                    <a class="nav-link active" href="/returndelivery">Return</a>
                                 </li>
                             </div>
                         </div>

@@ -14,6 +14,9 @@
     <meta charset="UTF-8">
 </head>
 <body>
+
+<form method="post" action="/deletecustomer/{{$cust->custid}}">
+        @csrf
     <div class="container" style="margin-left: 0; margin-top: 40px">
         <div class="row">
             <div class="col-2">
@@ -25,48 +28,45 @@
                         <div class="form-group row">
                             <label for="name" class="col-sm-2 col-form-label ">First Name</label>
                             <div class="col-sm-10">
-                            <input type="text" readonly class="form-control-plaintext text-secondary" id="staticName" value="ขวัญจิรา">
+                            <input type="text" readonly class="form-control-plaintext text-secondary" id="staticName" value="{{$cust->fname}}">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="name" class="col-sm-2 col-form-label ">Last Name</label>
                             <div class="col-sm-10">
-                            <input type="text" readonly class="form-control-plaintext text-secondary" id="staticName" value="กาเกตุ">
+                            <input type="text" readonly class="form-control-plaintext text-secondary" id="staticName" value="{{$cust->lname}}">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="price" class="col-sm-2 col-form-label ">Tel</label>
                             <div class="col-sm-10">
-                            <input type="float" readonly class="form-control-plaintext text-secondary" id="staticPrice" value="081-111-1111">
+                            <input type="float" readonly class="form-control-plaintext text-secondary" id="staticPrice" value="{{$cust->telphone}}">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="type" class="col-sm-2 col-form-label ">Address</label>
                             <div class="col-sm-10">
-                            <input type="text" readonly class="form-control-plaintext text-secondary" id="staticTotalType" value="อำเภอดอยสะเก็ด จังหวัดเชียงใหม่">
+                            <input type="text" readonly class="form-control-plaintext text-secondary" id="staticTotalType" value="{{$cust->address}}">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="description" class="col-sm-2 col-form-label ">Email</label>
                             <div class="col-sm-10">
-                            <input type="text" readonly class="form-control-plaintext text-secondary" id="staticDescription" value="kwan@gmail.com">
+                            <input type="text" readonly class="form-control-plaintext text-secondary" id="staticDescription" value="{{$cust->email}}">
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="row" style="margin-left: 10%; margin-top: 20px">
                         <div class="col" style=" text-align: center;">
-                            <button type="button" class="btn btn-warning">Cancel</button>
-                            <button type="button" class="btn btn-danger" style="margin-left: 30px;">Delete</button>
+                            <a href="/customer" type="button" class="btn btn-warning" > cancle </a>
+                            <button type="submit" class="btn btn-danger" style="margin-left: 30px;">delete</button>
                         </div>
                     </div>
             </div>
 
         </div>
     </div>
-
+</form>
 </body>
 </html>
-
-
-
