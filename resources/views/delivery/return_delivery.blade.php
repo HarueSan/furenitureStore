@@ -14,9 +14,8 @@
     </head>
     </br>
     <body>
-    <?php print_r($delivery);?>
-        <form method="post" action="returndelivery/{id}">
-            @csrf
+    <!-- <?php print_r($delivery);?> -->
+
         <div class="container" style="margin-left:auto; margin-top:auto">
             <div class="row">
                 <div class="col-2">
@@ -26,6 +25,14 @@
                     <div class="row">
                     <h2>แบบฟอร์มการคืนสินค้า</h2>
                     </div>
+                    <form>
+                        <div class="form-group row">
+                            <label for="staticbillid" name="bill_id" class="col-sm-2 col-form-label">ID of Billdetail:</label>
+                            <div class="col-sm-10">
+                                <input type="text" readonly class="form-control-plaintext" id="staticbillid" value="{{$delivery->id}}">
+                            </div>
+                        </div>
+                    </form>
                     <div class="row" style="margin-top: 20px">
                         <div class="col-2">
                             <div class="form-group">
@@ -33,39 +40,43 @@
                             </div>
                         </div>
                         <div class="col-6">
-
+                        <input type="text" class="" readonly value="{{$delivery->name}}">
                         </div>
                     </div>
-                    <div class="row" style="margin-top: 20px;">
-                        <div class="col-2">
-                            <p>จำนวนสินค้าที่จะขอคืน</p>
-                        </div>
-                        <div class="col-6">
-                            <div class="input-group">
-                                <input type="number" class="form-control" aria-label="pieces">
-                                <div class="input-group-append">
-                                    <span class="input-group-text">ชิ้น</span>
+                    <form method="post" action="/updatedelivery/{{$delivery->id}}">
+                        @csrf
+                        <div class="row" style="margin-top: 20px;">
+                            <div class="col-2">
+                                <p>จำนวนสินค้าที่จะขอคืน</p>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-6">
+                                    <input type="number" name="return_quantity" class="form-control" value="{{$delivery->quantity}}">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">ชิ้น</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    <div class="row" style="margin-top: 20px;">
-                        <div class="col-3 mt-4" >
-                            <p>เหตุผลในการคืนสินค้า</p>
+                        <div class="form-group">
+                            <div class="row" style="margin-top: 20px;">
+                                <div class="col-3 mt-4" >
+                                    <p>เหตุผลในการคืนสินค้า</p>
+                                </div>
+                                <div class="col mt-4">
+                                    <textarea type="text" name="reason_for_returned" class="form-control" placeholder="กรุณาพิมพ์..." ></textarea>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col mt-4">
-                            <textarea type="text" class="form-control" placeholder="กรุณาพิมพ์..."></textarea>
+                        <div class="row mt-4">
+                            <div class="col">
+                                <a class="btn btn-danger" href="/delivery" role="button">Cancel</a>
+                                <button type="submit" class="btn btn-warning" style="margin-left: 30px;">OK</button>
+                            </div>
                         </div>
-                    </div>
-                    </div>
-                    <div class="row mt-4">
-                        <div class="col">
-                            <a class="btn btn-danger" href="/delivery" role="button">Cancel</a>
-                            <button type="submit" class="btn btn-warning" style="margin-left: 30px;">OK</button>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
-        </form>
 </body>
 </html>

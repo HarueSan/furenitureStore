@@ -101,6 +101,10 @@ Route::get('/report',function(){
 
 Route::get('/delivery',[DeliveryController::class,'home']); //'home' is a function name in Controllers\Delivery\DeliveryController
 Route::get('/editdelivery/{id}',[DeliveryController::class,'editDelivery']);
-Route::get('/returndelivery/{id}',[DeliveryController::class,'returnDeliveryPage']);
+Route::get('/returndelivery/{id}',[DeliveryController::class,'ShowReturnDeliveryPage']);
+Route::get('/editdelistatus',[DeliveryController::class,'showEditStatusPage']);
+Route::get('/editdelistatus/{id}',[DeliveryController::class,'showEditStatusPage']);
 
-Route::post('returndelivery/{id}',[DeliveryController::class,'returnDelivery']);//คืนสินค้ากลับไปทั้งหมด
+Route::post('/updatedelivery/{id}',[DeliveryController::class,'returnAllDelivery']);//คืนสินค้าทุกชิ้นใน billdetail
+Route::post('/editdelistatus/{id}',[DeliveryController::class,'editDelistatus']);
+Route::post('/updatestatus/{id}',[DeliveryController::class,'editStatus']);

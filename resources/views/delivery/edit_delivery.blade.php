@@ -35,7 +35,7 @@
                             <table class="table">
                             <thead class="thead-dark">
                                 <tr>
-                                    <th>ID Bill</th>
+                                    <th>ID Billdetail</th>
                                     <th>รายการสินค้า</th>
                                     <th>สถานะการจัดส่ง</th>
                                     <th>Action</th>
@@ -48,7 +48,7 @@
                                     <td>{{$item->name}}</td>
                                     <td>{{$item->deliname}}</td>
                                     <td>
-                                        <a class="btn btn-danger" href="/returndelivery" role="button">คืนสินค้า</a>
+                                        <a class="btn btn-danger" href="/returndelivery/{{$item->id}}" role="button">คืนสินค้า</a>
                                     </td>
                                 </tr>
                                 @endforeach

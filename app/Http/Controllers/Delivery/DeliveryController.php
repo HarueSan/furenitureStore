@@ -30,10 +30,9 @@ class DeliveryController extends Controller{
 
         $delistatussql = "select * from delivery_status";
 
-        $deliverysql = "select * from headbill
-            where id = ?";
+        $deliverysql = "select * from headbill where id = ?";
 
-        $deliveryDetailSQL = "select hb.*, f.name, ds.name as deliname, bd.quantity,f.price
+        $deliveryDetailSQL = "select bd.id, f.name, ds.name as deliname, bd.quantity,f.price
             from headbill hb
             join billdetail bd on bd.headbill_id = hb.id
             join furniture f on bd.furniture_id = f.id
@@ -54,14 +53,14 @@ class DeliveryController extends Controller{
             'details' => $details,
         ]);
     }
-    function returnDelivery($id){
+    function ShowReturnDeliveryPage($id){
 
         $furname = "select * from furniture";
 
         $sql = "SELECT billdetail.id,furniture.name,billdetail.quantity
         FROM billdetail
         join furniture on billdetail.furniture_id = furniture.id
-        ";
+        where billdetail.id = ?";
 
         $delivery = DB::select($sql,[$id])[0];
         $fname = DB::select($furname,[$id]);
@@ -71,10 +70,62 @@ class DeliveryController extends Controller{
             'fname' => $fname,
         ]);
     }
-    function deleteDelivery(Request $request,$id){
-        $data =  $request->all();
-        $sql = "DELETE from billdetail where id = ?";
-        $deleted = DB::delete($sql,[$id]);
-        return redirect('/editdelivery/{id}');
+    function returnAllDelivery(Request $request,$id){
+        $form =  $request->all();
+        $returnid = $form['bill_id'];
+        $returnall = $form['return_quantity'];
+        $returnreason = $form['reason_for_returned'];
+
+        $updatedelivery = "UPDATE headbill
+        SET delistatus_id = 5
+        where id = ?";
+        $insertreturnorder = "INSERT INTO 'furniturestore'.'return_order' ('bill_id','return_quantity','reason_for_returned')
+        VALUES (?,?,?)";
+        $updated = DB::update($updatedelivery,[$returnall,$id]);
+        $inserted = DB::insert($insertreturnorder,[$returnid, $returnall, $returnreason]);
+        return redirect("/editdelivery/{id}");
+    }
+    // function refundDelivery(Request $request,$id){
+    //     $form = $request->all();
+    //     $billid = $form['bill_id'];
+    //     $reason = $form['reason_for_returned'];
+    //     $returnquantity = $form['return_quantity'];
+    //     $insertsql = "INSERT INTO 'furniturestore'.'return_order' ('bill_id','reason_for_returned','return_quantity')";
+    //     $sql = "update billdetail
+    //     inner join return_order on billdetail.id = return_order.bill_id
+    //     set quantity = quantity - return_quantity
+    //     where billdetail.id = ?";
+
+    //     $insertedsql = DB::insert($insertsql,[$billid, $reason, $returnquantity]);
+    //     $refundsql = DB::update($sql,[$id]);
+
+    //     return redirect("/editdelivery/{id}");
+    // }
+    function showEditStatusPage(Request $request,$id){
+
+        $status = "select * from delivery_status";
+
+        $headbill = "select * from headbill where id = ?";
+
+        $deliSta = DB::select($status);
+        $bill = DB::select($headbill, [$id])[0];
+
+
+        return view('delivery/edit_delistatus',[
+            'delistatus' => $deliSta,
+            'bill' => $bill
+        ]);
+    }
+    function editStatus(Request $request,$id){
+        $form = $request->all();
+        $updatestatus = $form['delistatus_id'];
+
+
+        $updateStatus = "UPDATE headbill
+        SET delistatus_id = ?
+        WHERE id = ?";
+
+        $updated = DB::update($updateStatus,[$updatestatus, $id]);
+        return redirect("/delivery");
     }
 }

@@ -36,6 +36,7 @@
                                     <th>Address</th>
                                     <th>Status</th>
                                     <th>Action</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -44,6 +45,7 @@
                                     <td>{{$delivery->id}}</td>
                                     <td>{{$delivery->address}}</td>
                                     <td>{{$delivery->deliname}}</td>
+                                    <td><a class="btn btn-success" href="/editdelistatus/{{$delivery->id}}" role="button">แก้ไขสถานะ</a></td>
                                     <td>
                                         <a class="btn btn-danger" href="/editdelivery/{{$delivery->id}}" role="button">Return</a>
                                     </td>
